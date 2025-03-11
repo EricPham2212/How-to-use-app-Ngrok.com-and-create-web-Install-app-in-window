@@ -32,4 +32,27 @@ Before getting started, ensure you have the following:
    ```sh
    ngrok http 8000
 Succesfully
-   -----------------------------------------------------------------------------
+   ---------------------------------------------------------------------------------------
+Download file resource web basic:
+create file lol.py in file.txt:
+
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+port = 8000
+server_address = ('', port)
+httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
+print(f'http://localhost:{port}')
+try:
+    httpd.serve_forever()
+except KeyboardInterrupt:
+    print('\nServer đã dừng.')
+    httpd.server_close()
+------------------------------------------------------------------------------------------
+python lol.py (cmd) -> Run
+![image](https://github.com/user-attachments/assets/b18c8f7f-789d-4e16-9501-26cb3b9add41)
+Next in Ngrok run :
+ngrok.exe http 8000
+Done!!!
+copy Forwarding (https://.....)
+open link same in picture !
+![image](https://github.com/user-attachments/assets/a54398c9-48da-4ffd-86bb-e1a235c12afc)
+---------------------------------------END------------------------------------------------
